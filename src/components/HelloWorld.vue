@@ -6,10 +6,16 @@
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
     </p>
-    <h3>Installed CLI Plugins</h3>
-    <h3>Essential Links</h3>
-    <h3>Ecosystem</h3>
     <el-button type="primary" plain>你好</el-button>
+    <el-button type="primary" plain>你好</el-button>
+    <el-button type="primary" plain>你好</el-button>
+    <el-row>
+      <el-col :span="24"><div class="grid-content bg-purple-dark"></div></el-col>
+    </el-row>
+  <el-row>
+    <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
+    <el-col :span="12"><div class="grid-content bg-purple-light"></div></el-col>
+</el-row>
   </div>
 </template>
 
@@ -23,7 +29,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss">
 h3 {
   margin: 40px 0 0;
 }
@@ -37,5 +43,31 @@ li {
 }
 a {
   color: #42b983;
+}
+.el-row {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+.el-col {
+  border-radius: 4px;
+}
+.bg-purple-dark {
+  background: red;
+}
+.bg-purple {
+  background: #d3dce6;
+}
+.bg-purple-light {
+  background: #e5e9f2;
+}
+.grid-content {
+  border-radius: 4px;
+  min-height: 36px;
+}
+.row-bg {
+  padding: 10px 0;
+  background-color: #f9fafc;
 }
 </style>
